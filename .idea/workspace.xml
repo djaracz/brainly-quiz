@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55041bb0-6661-4e12-ae3a-8be840b1a42e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/appData.js" afterPath="$PROJECT_DIR$/app/js/appData.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/functions.js" afterPath="$PROJECT_DIR$/app/js/functions.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +28,8 @@
       <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="31" column="36" lean-forward="true" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+            <state relative-caret-position="1600">
+              <caret line="64" column="2" lean-forward="true" selection-start-line="64" selection-start-column="2" selection-end-line="64" selection-end-column="2" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -366,12 +365,12 @@
       <workItem from="1493460055671" duration="8424000" />
       <workItem from="1493492215250" duration="1365000" />
       <workItem from="1493507427123" duration="6911000" />
-      <workItem from="1493544020683" duration="18810000" />
+      <workItem from="1493544020683" duration="20576000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37538000" />
+    <option name="totallyTimeSpent" value="39304000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -574,8 +573,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="31" column="36" lean-forward="true" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+        <state relative-caret-position="1600">
+          <caret line="64" column="2" lean-forward="true" selection-start-line="64" selection-start-column="2" selection-end-line="64" selection-end-column="2" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
