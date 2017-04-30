@@ -1,4 +1,5 @@
-import { setFetchedData } from './functions';
+import appData from './appData';
+import { runQuiz } from './functions';
 
 
 const fetchData = () => {
@@ -20,6 +21,14 @@ const fetchData = () => {
             }
         }
     }
+};
+
+const setFetchedData = (data) => {
+    let {questions, time_seconds} = data;
+
+    appData.fetchedQuestions = questions;
+    appData.timePerQuestion = Math.floor(time_seconds * 1000 / questions.length);
+    runQuiz();
 };
 
 export default fetchData;
