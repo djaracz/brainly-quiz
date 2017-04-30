@@ -1,4 +1,12 @@
-import test from './test';
-import './style.scss';
+import './styles/style.scss';
+import { startView } from './js/views';
 
-test();
+
+export const root = (view) => {
+    let rootComponent = document.getElementById('root');
+    rootComponent.appendChild(view());
+};
+
+(function () {
+    root(startView);
+})();
