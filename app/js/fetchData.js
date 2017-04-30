@@ -1,4 +1,4 @@
-import appData from './appData';
+import { setFetchedData } from './functions';
 
 
 const fetchData = () => {
@@ -11,12 +11,11 @@ const fetchData = () => {
     );
     request.send();
     request.onreadystatechange = () => {
-        console.log(request.readyState);
         if (request.readyState === 4) {
             if (request.status === 200) {
-                let response = JSON.parse(request.responseText);
-                appData.timeSeconds = response.timeSeconds;
-                appData.questions = response.questions;
+                let data = JSON.parse(request.responseText);
+                console.log(data);
+                setFetchedData(data);
             } else {
                 console.error('smthing gone wrong');
             }
