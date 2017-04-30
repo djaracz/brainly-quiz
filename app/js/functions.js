@@ -1,7 +1,7 @@
 import appData from './appData';
 import fetchData from './fetchData';
 import { root } from '../index';
-import { questionView, resultView, startView } from './views';
+import { questionCorrectAnswerView, questionView, resultView, startView } from './views';
 
 
 const SHOW_CORRECT_ANSWER_DURATION = 3000;
@@ -11,7 +11,7 @@ const stopTimer = (showCorrect) => {
     incrementCurrentQuestion();
     clearInterval(appData.interval);
     if (showCorrect) {
-        showCorrectAnswer();
+        showCorrectAnswerTimer();
     } else {
         attemptNextQuestion();
     }
@@ -21,7 +21,7 @@ const runTimer = (duration, showCorrect) => {
     appData.interval = setTimeout(() => stopTimer(showCorrect), duration)
 };
 
-const showCorrectAnswer = () => runTimer(SHOW_CORRECT_ANSWER_DURATION, false);
+const showCorrectAnswerTimer = () => runTimer(SHOW_CORRECT_ANSWER_DURATION, false);
 
 const runQuiz = () => {
     appData.showResult = false;
@@ -71,7 +71,8 @@ export const chosenAnswer = (isCorrect) => {
         appData.allowChooseAnswer = false;
         clearInterval(appData.interval);
         validateAnswer(isCorrect);
-        showCorrectAnswer();
+        showCorrectAnswerTimer();
+        root(questionCorrectAnswerView);
     }
 };
 

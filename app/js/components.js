@@ -29,18 +29,29 @@ export const questionComponent = () => {
 
 const answerComponent = (correct, answer) => {
     let answerToRender = document.createElement('li');
-    answerToRender.addEventListener('click', () => chosenAnswer(correct));
-    answerToRender.innerHTML = `${answer}`;
+
+    if (answer) {
+        answerToRender.addEventListener('click', () => chosenAnswer(correct));
+        answerToRender.innerHTML = `${answer}`;
+    }
 
     return answerToRender;
 };
 
-export const answersComponent = () => {
+export const answersComponent = (showAnswer) => {
     let {fetchedQuestions, currentQuestion} = appData;
     let {answers} = fetchedQuestions[currentQuestion];
 
     let answersToRender = document.createElement('ul');
-    answers.map(ans => answersToRender.appendChild(answerComponent(ans.correct, ans.answer)));
+
+    if (showAnswer) {
+        answers.map(ans =>
+            answersToRender.appendChild((ans.correct) ?
+                answerComponent(ans.correct, ans.answer) : answerComponent()));
+    } else {
+        answers.map(ans =>
+            answersToRender.appendChild(answerComponent(ans.correct, ans.answer)));
+    }
 
     return answersToRender;
 };

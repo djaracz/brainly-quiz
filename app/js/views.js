@@ -28,7 +28,15 @@ export const startView = () => {
 export const questionView = () => {
     let view = document.createElement('div');
     view.appendChild(questionComponent());
-    view.appendChild(answersComponent());
+    view.appendChild(answersComponent(false));
+
+    return mainView(view);
+};
+
+export const questionCorrectAnswerView = () => {
+    let view = document.createElement('div');
+    view.appendChild(questionComponent());
+    view.appendChild(answersComponent(true));
 
     return mainView(view);
 };
