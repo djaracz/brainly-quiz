@@ -41,21 +41,16 @@ export const restartQuiz = () => {
 };
 
 const nextQuestion = () => {
-    appData.currentQuestion += 1;
     appData.allowChooseAnswer = true;
     root(questionView);
 };
 
-const validateAnswer = (isCorrect) => {
-    if (isCorrect) {
-        appData.userScore += 1;
-    }
-};
+const validateAnswer = (isCorrect) => (isCorrect) ? appData.userScore += 1 : null;
 
 const incrementCurrentQuestion = () => appData.currentQuestion += 1;
 
-const attemptNextQuestion = () =>
-    (appData.currentQuestion < appData.fetchedQuestions.length) ? nextQuestion() : root(resultView);
+const attemptNextQuestion = () => (appData.currentQuestion < appData.fetchedQuestions.length) ?
+    nextQuestion() : root(resultView);
 
 export const chosenAnswer = (isCorrect) => {
     let {allowChooseAnswer} = appData;
