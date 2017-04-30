@@ -9,6 +9,7 @@ const SHOW_CORRECT_ANSWER_DURATION = 3000;
 const stopTimer = (showCorrect) => {
     appData.allowChooseAnswer = false;
     incrementCurrentQuestion();
+    clearTimeout(appData.timeout);
     clearInterval(appData.interval);
     if (showCorrect) {
         showCorrectAnswerTimer();
@@ -18,17 +19,31 @@ const stopTimer = (showCorrect) => {
 };
 
 const runTimer = (duration, showCorrect) => {
-    appData.interval = setTimeout(() => stopTimer(showCorrect), duration)
+    appData.timeout = setTimeout(() => stopTimer(showCorrect), duration);
 };
 
-const showCorrectAnswerTimer = () => runTimer(SHOW_CORRECT_ANSWER_DURATION, false);
+const setTimerWidth = () => {
+    let timer = document.getElementsByClassName('timer');
+
+    appData.currentTimerWidth -= 1;
+    timer[0].style.width = `${appData.currentTimerWidth}%`;
+};
+
+const startInterval = () => {
+    appData.interval = setInterval(() => setTimerWidth(), appData.timePerQuestion / 100);
+};
+
+const showCorrectAnswerTimer = () => {
+    runTimer(SHOW_CORRECT_ANSWER_DURATION, false);
+    root(questionCorrectAnswerView);
+};
 
 const runQuiz = () => {
     appData.showResult = false;
     appData.quizStarted = true;
     appData.allowChooseAnswer = true;
-    // TODO: * 1000
-    runTimer(appData.timeSeconds * 10, true);
+    runTimer(appData.timePerQuestion, true);
+    startInterval();
     root(questionView);
 };
 
@@ -38,13 +53,15 @@ const resetQuizData = () => {
     appData.allowChooseAnswer = false;
     appData.userScore = 0;
     appData.currentQuestion = 0;
+    clearTimeout(appData.timeout);
     clearInterval(appData.interval);
 };
 
 const nextQuestion = () => {
     appData.allowChooseAnswer = true;
-    // TODO: * 1000
-    runTimer(appData.timeSeconds * 10, true);
+    appData.currentTimerWidth = 100;
+    runTimer(appData.timePerQuestion, true);
+    startInterval();
     root(questionView);
 };
 
@@ -69,6 +86,7 @@ export const chosenAnswer = (isCorrect) => {
 
     if (allowChooseAnswer) {
         appData.allowChooseAnswer = false;
+        clearTimeout(appData.timeout);
         clearInterval(appData.interval);
         validateAnswer(isCorrect);
         showCorrectAnswerTimer();
@@ -90,6 +108,6 @@ export const setFetchedData = (data) => {
     let {questions, time_seconds} = data;
 
     appData.fetchedQuestions = questions;
-    appData.timeSeconds = time_seconds;
+    appData.timePerQuestion = Math.floor(time_seconds * 1000 / questions.length);
     runQuiz();
 };

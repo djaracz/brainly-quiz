@@ -14,7 +14,6 @@ const fetchData = () => {
         if (request.readyState === 4) {
             if (request.status === 200) {
                 let data = JSON.parse(request.responseText);
-                console.log(data);
                 setFetchedData(data);
             } else {
                 console.error('smthing gone wrong');

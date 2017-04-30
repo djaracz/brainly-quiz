@@ -2,14 +2,17 @@ import { restartQuiz, attemptToRunQuiz } from './functions';
 import {
     answersComponent,
     createButtonComponent,
-    headerComponent, paragraphComponent,
-    questionComponent
+    headerComponent,
+    paragraphComponent,
+    questionComponent,
+    timerComponent
 } from './components';
 import appData from './appData';
 
 
 const mainView = (child) => {
     let view = document.createElement('div');
+    view.appendChild(timerComponent());
     view.appendChild(createButtonComponent('restart quiz', restartQuiz));
     view.appendChild(child);
 
