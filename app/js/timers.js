@@ -8,8 +8,7 @@ const SHOW_CORRECT_ANSWER_DURATION = 3000;
 
 const stopTimer = (showCorrect) => {
     appData.allowChooseAnswer = false;
-    clearTimeout(appData.timeout);
-    clearInterval(appData.interval);
+    clearTimers();
     if (showCorrect) {
         showCorrectAnswerTimer();
     } else {
@@ -18,10 +17,15 @@ const stopTimer = (showCorrect) => {
 };
 
 const setTimerWidth = () => {
-    let timer = document.getElementsByClassName('timer');
+    let timer = document.getElementById('timer');
 
     appData.currentTimerWidth -= 1;
-    timer[0].style.width = `${appData.currentTimerWidth}%`;
+    timer.style.width = `${appData.currentTimerWidth}%`;
+};
+
+export const clearTimers = () => {
+    clearTimeout(appData.timeout);
+    clearInterval(appData.interval);
 };
 
 export const startInterval = () => {

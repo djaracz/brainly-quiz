@@ -2,7 +2,7 @@ import appData from './appData';
 import fetchData from './fetchData';
 import { root } from '../index';
 import { questionCorrectAnswerView, questionView, resultView, startView } from './views';
-import { runTimer, showCorrectAnswerTimer, startInterval } from './timers';
+import { clearTimers, runTimer, showCorrectAnswerTimer, startInterval } from './timers';
 
 
 const resetQuizData = () => {
@@ -12,8 +12,7 @@ const resetQuizData = () => {
     appData.userScore = 0;
     appData.currentQuestion = 0;
     appData.currentTimerWidth = 100;
-    clearTimeout(appData.timeout);
-    clearInterval(appData.interval);
+    clearTimers();
 };
 
 const nextQuestion = () => {
@@ -41,9 +40,16 @@ export const runQuiz = () => {
     root(questionView);
 };
 
-export const attemptNextQuestion = () =>
-    (appData.currentQuestion < appData.fetchedQuestions.length) ?
-        nextQuestion() : root(resultView);
+export const attemptNextQuestion = () => {
+    let {currentQuestion, fetchedQuestions} = appData;
+
+    if (currentQuestion < fetchedQuestions.length - 1) {
+        nextQuestion();
+    } else {
+        clearTimers();
+        root(resultView);
+    }
+};
 
 export const restartQuiz = () => {
     resetQuizData();
@@ -55,8 +61,7 @@ export const chosenAnswer = (isCorrect) => {
 
     if (allowChooseAnswer) {
         appData.allowChooseAnswer = false;
-        clearTimeout(appData.timeout);
-        clearInterval(appData.interval);
+        clearTimers();
         validateAnswer(isCorrect);
         showCorrectAnswerTimer();
         root(questionCorrectAnswerView);

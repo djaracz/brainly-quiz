@@ -65,7 +65,7 @@ export const paragraphComponent = (text) => {
 
 export const timerComponent = () => {
     let timerToRender = document.createElement('div');
-    timerToRender.className = 'timer';
+    timerToRender.id = 'timer';
 
     return timerToRender;
 };
