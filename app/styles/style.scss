@@ -32,11 +32,15 @@ html, body, #root {
     font-size: 28px;
     @include mQ($mediumDevice) { font-size: 33px }
 }
+// end start view
 
 // quiz
 .question-container {
     @include responsiveCenteredContainer;
-    height: 80%;
+    padding-top: 10%;
+    height: 100% !important;
+    @include mQ($mediumDevice) { padding: 0; }
+    @include mQ($largeDevice) { padding: 5% $largePadding 0 }
 }
 
 .sg-list__element--position, .sg-list--position {
@@ -53,6 +57,11 @@ html, body, #root {
     word-wrap: break-word;
 }
 
+.sg-text-bit--font-size {
+    font-size: 36px;
+    line-height: 38px;
+}
+
 .sg-box--border-dashed {
     border: 2px dashed $answersBorderColor;
 }
@@ -60,3 +69,15 @@ html, body, #root {
 .sg-box--overlay {
     overflow: overlay;
 }
+
+.sg-button-primary-round--fixed {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 10;
+}
+
+.sg-button-primary-round--no-border {
+    border: 0;
+}
+// end quiz
