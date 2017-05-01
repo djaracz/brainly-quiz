@@ -11,38 +11,6 @@ html, body, #root {
     background-color: $questionBgColor;
 }
 
-.main-container {
-    @include maxSize;
-    background-color: $questionSubBgColor;
-}
-
-// start view
-.start-container {
-    @include responsiveCenteredContainer(true);
-}
-
-.sg-button-primary--size {
-    height: 60px;
-    @include mQ($mediumDevice) { height: 70px; }
-    @include mQ($largeDevice) { margin-top: 20px; }
-}
-
-.sg-button-primary--size__text {
-    font-size: 28px;
-    @include mQ($mediumDevice) { font-size: 33px }
-}
-
-// end start view
-
-// quiz
-.question-container {
-    @include responsiveCenteredContainer(false);
-    padding-top: 10%;
-    height: 100% !important;
-    @include mQ($mediumDevice) { padding: 0; }
-    @include mQ($largeDevice) { padding: 5% $padding 0 }
-}
-
 .sg-list__element--position, .sg-list--position {
     position: relative;
     z-index: 1;
@@ -66,52 +34,3 @@ html, body, #root {
     font-size: 36px;
     line-height: 38px;
 }
-
-.sg-box--border-dashed {
-    border: 2px dashed $answersBorderColor;
-}
-.sg-box--overlay {
-    overflow: overlay;
-}
-
-.sg-button-primary-round--fixed {
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    z-index: 10;
-    @include mQ($mediumDevice) {
-        bottom: 25px;
-        right: 25px;
-    }
-    @include mQ($largeDevice) {
-        bottom: 35px;
-        right: 35px;
-    }
-}
-
-.sg-button-primary-round--no-border {
-    border: 0;
-}
-
-.sg-button-primary-round--hover {
-    &:hover {
-        svg {
-            transition: transform .6s ease-in-out;
-            transform: rotate(360deg);
-        }
-    }
-}
-// end quiz
-
-// result
-.result-container {
-    @include maxSize;
-    background-color: $resultBgColor;
-    position: relative;
-}
-
-.result-container__show-result {
-    @include responsiveCenteredContainer(true);
-    align-items: center;
-}
-// end result

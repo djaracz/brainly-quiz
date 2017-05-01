@@ -1,0 +1,38 @@
+@import "vars";
+@import "mixins";
+
+.main-container {
+    @include maxSize;
+    background-color: $questionSubBgColor;
+}
+
+.start-container {
+    @include responsiveCenteredContainer(true);
+}
+
+.question-container {
+    @include responsiveCenteredContainer(false);
+    padding-top: 10%;
+    height: 100% !important;
+    @include mQ($mediumDevice) { padding: 0; }
+    @include mQ($largeDevice) { padding: 5% $padding 0 }
+}
+
+.result-container {
+    @include maxSize;
+    background-color: $resultBgColor;
+    position: relative;
+}
+
+.result-container__show-result {
+    @include responsiveCenteredContainer(true);
+    align-items: center;
+}
+
+.sg-box--border-dashed {
+    border: 2px dashed $answersBorderColor;
+}
+.sg-box--overlay {
+    overflow: overlay;
+}
+
