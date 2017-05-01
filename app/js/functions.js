@@ -1,8 +1,11 @@
 import appData from './appData';
 import fetchData from './fetchData';
 import { root } from '../index';
-import { questionCorrectAnswerView, questionView, resultView, startView } from './views';
 import { clearTimers, runTimer, showCorrectAnswerTimer, startInterval } from './timers';
+import { questionView } from './views/questionView';
+import { resultView } from './views/resultView';
+import { startView } from './views/startView';
+import { questionCorrectAnswerView } from './views/questionCorrectAnswerView';
 
 
 const resetQuizData = () => {

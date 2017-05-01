@@ -1,5 +1,5 @@
 import './styles/style.scss';
-import { startView } from './js/views';
+import { startView } from './js/views/startView';
 
 
 export const root = (view) => {
