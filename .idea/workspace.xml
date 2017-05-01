@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55041bb0-6661-4e12-ae3a-8be840b1a42e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/js/views/mainView.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/js/views/questionCorrectAnswerView.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/js/views/questionView.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/js/views/resultView.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/js/views/startView.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/components.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/views.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.js" afterPath="$PROJECT_DIR$/app/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/functions.js" afterPath="$PROJECT_DIR$/app/js/functions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/timers.js" afterPath="$PROJECT_DIR$/app/js/timers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/views/startView.js" afterPath="$PROJECT_DIR$/app/js/views/startView.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/mixins.scss" afterPath="$PROJECT_DIR$/app/styles/mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/style.scss" afterPath="$PROJECT_DIR$/app/styles/style.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/vars.scss" afterPath="$PROJECT_DIR$/app/styles/vars.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,7 +29,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
@@ -41,6 +37,48 @@
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/styles/style.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="470">
+              <caret line="82" column="17" lean-forward="false" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mixins.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/styles/mixins.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="startView.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/js/views/startView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#46#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vars.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/styles/vars.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -72,8 +110,6 @@
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/js/appData.js" />
         <option value="$PROJECT_DIR$/app/styles/mixins.js" />
-        <option value="$PROJECT_DIR$/app/styles/mixins.scss" />
-        <option value="$PROJECT_DIR$/app/styles/vars.scss" />
         <option value="$PROJECT_DIR$/app/js/fetchData.js" />
         <option value="$PROJECT_DIR$/app/js/components/createButton.js" />
         <option value="$PROJECT_DIR$/app/js/components/header.js" />
@@ -84,8 +120,6 @@
         <option value="$PROJECT_DIR$/app/js/components/timer.js" />
         <option value="$PROJECT_DIR$/app/js/components/answers.js" />
         <option value="$PROJECT_DIR$/app/js/components/question.js" />
-        <option value="$PROJECT_DIR$/app/styles/style.scss" />
-        <option value="$PROJECT_DIR$/app/js/views/startView.js" />
         <option value="$PROJECT_DIR$/app/js/views/mainView.js" />
         <option value="$PROJECT_DIR$/app/js/views/questionView.js" />
         <option value="$PROJECT_DIR$/app/js/views/questionCorrectAnswerView.js" />
@@ -94,6 +128,10 @@
         <option value="$PROJECT_DIR$/app/js/functions.js" />
         <option value="$PROJECT_DIR$/app/js/timers.js" />
         <option value="$PROJECT_DIR$/app/index.js" />
+        <option value="$PROJECT_DIR$/app/styles/style.scss" />
+        <option value="$PROJECT_DIR$/app/styles/vars.scss" />
+        <option value="$PROJECT_DIR$/app/styles/mixins.scss" />
+        <option value="$PROJECT_DIR$/app/js/views/startView.js" />
       </list>
     </option>
   </component>
@@ -394,12 +432,12 @@
       <workItem from="1493544020683" duration="21364000" />
       <workItem from="1493585500572" duration="10285000" />
       <workItem from="1493601079854" duration="1436000" />
-      <workItem from="1493631220123" duration="18538000" />
+      <workItem from="1493631220123" duration="19179000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70351000" />
+    <option name="totallyTimeSpent" value="70992000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -635,22 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/mixins.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/vars.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/components/createButton.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -705,14 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2050">
-          <caret line="82" column="3" lean-forward="false" selection-start-line="82" selection-start-column="3" selection-end-line="82" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -821,22 +835,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/views/startView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="82" column="17" lean-forward="false" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/vars.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/mixins.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/views/startView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>

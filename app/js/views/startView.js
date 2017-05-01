@@ -11,12 +11,12 @@ export const startView = () => {
         'sg-text-bit'
     ));
     view.appendChild(header(
-        'czy jestes gotowy sprawdźić swoja wiedzę?',
+        'czy uda ci się zdać?',
         'sg-text-bit sg-text-bit--not-responsive sg-text-bit--small sg-text-bit--gray'
     ));
     view.appendChild(header(
         'rozpocznij test już teraz!',
-        'sg-text-bit sg-text-bit--not-responsive sg-text-bit--warning'
+        'sg-text-bit sg-text-bit--warning'
     ));
     view.appendChild(createButton(
         'start quiz',

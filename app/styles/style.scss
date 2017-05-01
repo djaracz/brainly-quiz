@@ -40,7 +40,7 @@ html, body, #root {
     padding-top: 10%;
     height: 100% !important;
     @include mQ($mediumDevice) { padding: 0; }
-    @include mQ($largeDevice) { padding: 5% $largePadding 0 }
+    @include mQ($largeDevice) { padding: 5% $padding 0 }
 }
 
 .sg-list__element--position, .sg-list--position {
@@ -75,6 +75,14 @@ html, body, #root {
     bottom: 15px;
     right: 15px;
     z-index: 10;
+    @include mQ($mediumDevice) {
+        bottom: 25px;
+        right: 25px;
+    }
+    @include mQ($largeDevice) {
+        bottom: 35px;
+        right: 35px;
+    }
 }
 
 .sg-button-primary-round--no-border {

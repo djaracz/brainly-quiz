@@ -1,3 +1,4 @@
+@import "vars";
 
 @mixin mQ($args...) {
 @if length($args) == 1 {
@@ -20,12 +21,13 @@
     @include maxSize;
     display: flex;
     flex-direction: column;
+    padding: $padding;
     @include mQ($mediumDevice) {
         width: $mediumUp;
         margin: 0 auto;
     }
     @include mQ($largeDevice) {
         width: $largeOnly;
-        padding: $largePadding;
+        padding: $padding;
     }
 }
