@@ -11,7 +11,7 @@ export const mainView = (child) => {
             <use xlink:href="#icon-reload"></use>
         </svg>`,
         restartQuiz,
-        'sg-button-primary-round--fixed sg-button-primary-round--no-border sg-button-primary-round__icon'
+        'sg-button-primary-round--fixed sg-button-primary-round--no-border sg-button-primary-round--hover sg-button-primary-round__icon'
     ));
     view.appendChild(child);
 

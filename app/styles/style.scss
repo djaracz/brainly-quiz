@@ -31,6 +31,7 @@ html, body, #root {
     font-size: 28px;
     @include mQ($mediumDevice) { font-size: 33px }
 }
+
 // end start view
 
 // quiz
@@ -51,6 +52,11 @@ html, body, #root {
     cursor: pointer;
 }
 
+.sg-list__element--hover {
+    transition: padding .2s ease-in-out;
+    &:hover { padding-left: 5px; }
+}
+
 .sg-text-bit--wrap {
     overflow-wrap: break-word;
     word-wrap: break-word;
@@ -64,7 +70,6 @@ html, body, #root {
 .sg-box--border-dashed {
     border: 2px dashed $answersBorderColor;
 }
-
 .sg-box--overlay {
     overflow: overlay;
 }
@@ -86,6 +91,15 @@ html, body, #root {
 
 .sg-button-primary-round--no-border {
     border: 0;
+}
+
+.sg-button-primary-round--hover {
+    &:hover {
+        svg {
+            transition: transform .6s ease-in-out;
+            transform: rotate(360deg);
+        }
+    }
 }
 // end quiz
 

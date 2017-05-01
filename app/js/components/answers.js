@@ -20,7 +20,7 @@ export const answers = (showAnswer) => {
     } else {
         answers.map(ans =>
             answersToRender.appendChild(answer(
-                answerClassName,
+                `${answerClassName} sg-list__element--hover`,
                 ans.correct,
                 ans.answer
             )));
