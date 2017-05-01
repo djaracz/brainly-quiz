@@ -8,7 +8,6 @@ html, body, #root {
 #timer {
     @include maxSize;
     position: absolute;
-    z-index: 0;
     background-color: $questionBgColor;
 }
 
@@ -19,24 +18,9 @@ html, body, #root {
 
 // start view
 .start-container {
-    @include maxSize;
-    z-index: -1;
-    display: flex;
-    flex-direction: column;
+    @include responsiveCenteredContainer;
     justify-content: center;
-    @include mQ($mediumDevice) {
-        width: $mediumUp;
-        margin: 0 auto;
-    }
-    @include mQ($largeDevice) {
-        width: $largeOnly;
-        padding: $largePadding;
-    }
 }
-
-//.start-container--sub-gray {
-//    background-color: $questionSubBgColor;
-//}
 
 .sg-button-primary--size {
     height: 60px;
@@ -50,6 +34,29 @@ html, body, #root {
 }
 
 // quiz
-.question-container, .answer-container, .answers-container {
+.question-container {
+    @include responsiveCenteredContainer;
+    height: 80%;
+}
+
+.sg-list__element--position, .sg-list--position {
+    position: relative;
     z-index: 1;
+}
+
+.sg-list__element--pointer {
+    cursor: pointer;
+}
+
+.sg-text-bit--wrap {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.sg-box--border-dashed {
+    border: 2px dashed $answersBorderColor;
+}
+
+.sg-box--overlay {
+    overflow: overlay;
 }

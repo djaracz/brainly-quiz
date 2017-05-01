@@ -28,6 +28,7 @@ const setFetchedData = (data) => {
 
     appData.fetchedQuestions = questions;
     appData.timePerQuestion = Math.floor(time_seconds * 1000 / questions.length);
+    // appData.timePerQuestion = 1000000;
     runQuiz();
 };
 

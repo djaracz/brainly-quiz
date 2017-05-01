@@ -19,12 +19,12 @@ export const headerComponent = (text, className) => {
     return headerToRender;
 };
 
-export const questionComponent = () => {
+export const questionComponent = (className) => {
     let {fetchedQuestions, currentQuestion} = appData;
     let {question} = fetchedQuestions[currentQuestion];
 
     let questionToRender = document.createElement('h2');
-    questionToRender.className = 'question-container';
+    questionToRender.className = className;
     questionToRender.innerHTML = `Q: ${question}`;
 
     return questionToRender;
@@ -32,14 +32,29 @@ export const questionComponent = () => {
 
 const answerComponent = (correct, answer) => {
     let answerToRender = document.createElement('li');
-    answerToRender.className = 'answer-container';
+    answerToRender.className = 'sg-list__element sg-list__element--position sg-list__element--pointer';
+    answerToRender.innerHTML = `
+        <div class="sg-list__icon sg-list__icon--x32 sg-list__icon--align-top">
+            <svg class="sg-icon sg-icon--x18">
+                <use xlink:href="#icon-arrow_right"></use>
+            </svg>
+        </div>
+        <div class="sg-text sg-text--headline">${(answer) ? answer : ''}</div>
+    `;
 
     if (answer) {
         answerToRender.addEventListener('click', () => chosenAnswer(correct));
-        answerToRender.innerHTML = `${answer}`;
     }
 
     return answerToRender;
+};
+
+export const boxComponent = (child) => {
+    let boxToRender = document.createElement('div');
+    boxToRender.className = 'sg-box sg-box--border-dashed sg-box--mint-secondary sg-box--overlay';
+    boxToRender.appendChild(child);
+
+    return boxToRender;
 };
 
 export const answersComponent = (showAnswer) => {
@@ -47,7 +62,7 @@ export const answersComponent = (showAnswer) => {
     let {answers} = fetchedQuestions[currentQuestion];
 
     let answersToRender = document.createElement('ul');
-    answersToRender.className = 'answers-container';
+    answersToRender.className = 'sg-list sg-list--position';
 
     if (showAnswer) {
         answers.map(ans =>

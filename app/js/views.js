@@ -1,6 +1,6 @@
 import { restartQuiz, attemptToRunQuiz } from './functions';
 import {
-    answersComponent,
+    answersComponent, boxComponent,
     createButtonComponent,
     headerComponent,
     paragraphComponent,
@@ -46,18 +46,22 @@ export const startView = () => {
 
 export const questionView = () => {
     let view = document.createElement('div');
-    // view.className = "main-container main-container--sub-gray";
-    view.appendChild(questionComponent());
-    view.appendChild(answersComponent(false));
+    view.className = "question-container";
+    view.appendChild(
+        questionComponent('sg-text-bit sg-text-bit--small sg-text-bit--light sg-text-bit--wrap')
+    );
+    view.appendChild(boxComponent(answersComponent(false)));
 
     return mainView(view);
 };
 
 export const questionCorrectAnswerView = () => {
     let view = document.createElement('div');
-    // view.className = "main-container main-container--sub-gray";
-    view.appendChild(questionComponent());
-    view.appendChild(answersComponent(true));
+    view.className = "question-container";
+    view.appendChild(
+        questionComponent('sg-text-bit sg-text-bit--small sg-text-bit--light sg-text-bit--wrap')
+    );
+    view.appendChild(boxComponent(answersComponent(true)));
 
     return mainView(view);
 };

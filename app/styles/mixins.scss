@@ -15,3 +15,17 @@
     height: 100%;
     width: 100%;
 }
+
+@mixin responsiveCenteredContainer {
+    @include maxSize;
+    display: flex;
+    flex-direction: column;
+    @include mQ($mediumDevice) {
+        width: $mediumUp;
+        margin: 0 auto;
+    }
+    @include mQ($largeDevice) {
+        width: $largeOnly;
+        padding: $largePadding;
+    }
+}
