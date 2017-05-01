@@ -1,14 +1,22 @@
 import appData from '../appData';
 import { header } from '../components/header';
-import { paragraph } from '../components/paragraph';
 import { mainView } from './mainView';
 
 
 export const resultView = () => {
-    let {userScore} = appData;
+    let {userScore, fetchedQuestions} = appData;
+
+    let score = (userScore !== 0) ? Math.floor(userScore / fetchedQuestions.length * 100) : 0;
     let view = document.createElement('div');
-    view.appendChild(header('Score'));
-    view.appendChild(paragraph(`Your result is ${userScore}`));
+    let viewScore = document.createElement('div');
+
+    view.className = 'result-container';
+    viewScore.className = 'result-container__show-result';
+    viewScore.appendChild(header(
+        `twój wynik to: ${score}%`,
+        'sg-text-bit'
+    ));
+    view.appendChild(viewScore);
 
     return mainView(view);
 };

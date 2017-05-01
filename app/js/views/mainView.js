@@ -1,12 +1,12 @@
 import { timer } from '../components/timer';
-import { createButton } from '../components/createButton';
+import { button } from '../components/button';
 import { restartQuiz } from '../functions';
 
 export const mainView = (child) => {
     let view = document.createElement('div');
     view.className = 'main-container';
     view.appendChild(timer());
-    view.appendChild(createButton(
+    view.appendChild(button(
         `<svg class="sg-icon sg-icon--x24">
             <use xlink:href="#icon-reload"></use>
         </svg>`,

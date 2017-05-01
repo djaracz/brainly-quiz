@@ -17,10 +17,13 @@
     width: 100%;
 }
 
-@mixin responsiveCenteredContainer {
+@mixin responsiveCenteredContainer($justifyContentCenter) {
     @include maxSize;
     display: flex;
     flex-direction: column;
+    @if ($justifyContentCenter) {
+        justify-content: center;
+    }
     padding: $padding;
     @include mQ($mediumDevice) {
         width: $mediumUp;

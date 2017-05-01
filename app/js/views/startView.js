@@ -1,5 +1,5 @@
 import { header } from '../components/header';
-import { createButton } from '../components/createButton';
+import { button } from '../components/button';
 import { attemptToRunQuiz } from '../functions';
 
 
@@ -18,7 +18,7 @@ export const startView = () => {
         'rozpocznij test już teraz!',
         'sg-text-bit sg-text-bit--warning'
     ));
-    view.appendChild(createButton(
+    view.appendChild(button(
         'start quiz',
         attemptToRunQuiz,
         'sg-button-primary sg-button-primary--full-width sg-button-primary--size sg-button-primary--size__text'

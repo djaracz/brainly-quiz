@@ -18,8 +18,7 @@ html, body, #root {
 
 // start view
 .start-container {
-    @include responsiveCenteredContainer;
-    justify-content: center;
+    @include responsiveCenteredContainer(true);
 }
 
 .sg-button-primary--size {
@@ -36,7 +35,7 @@ html, body, #root {
 
 // quiz
 .question-container {
-    @include responsiveCenteredContainer;
+    @include responsiveCenteredContainer(false);
     padding-top: 10%;
     height: 100% !important;
     @include mQ($mediumDevice) { padding: 0; }
@@ -89,3 +88,16 @@ html, body, #root {
     border: 0;
 }
 // end quiz
+
+// result
+.result-container {
+    @include maxSize;
+    background-color: $resultBgColor;
+    position: relative;
+}
+
+.result-container__show-result {
+    @include responsiveCenteredContainer(true);
+    align-items: center;
+}
+// end result
