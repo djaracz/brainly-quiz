@@ -2,16 +2,18 @@ import appData from './appData';
 import { chosenAnswer } from './functions';
 
 
-export const createButtonComponent = (text, cb) => {
+export const createButtonComponent = (text, cb, className) => {
     let btnToRender = document.createElement('button');
+    btnToRender.className = className;
     btnToRender.innerHTML = text;
     btnToRender.addEventListener('click', () => cb());
 
     return btnToRender;
 };
 
-export const headerComponent = (text) => {
+export const headerComponent = (text, className) => {
     let headerToRender = document.createElement('h1');
+    headerToRender.className = className;
     headerToRender.innerHTML = text;
 
     return headerToRender;
@@ -22,6 +24,7 @@ export const questionComponent = () => {
     let {question} = fetchedQuestions[currentQuestion];
 
     let questionToRender = document.createElement('h2');
+    questionToRender.className = 'question-container';
     questionToRender.innerHTML = `Q: ${question}`;
 
     return questionToRender;
@@ -29,6 +32,7 @@ export const questionComponent = () => {
 
 const answerComponent = (correct, answer) => {
     let answerToRender = document.createElement('li');
+    answerToRender.className = 'answer-container';
 
     if (answer) {
         answerToRender.addEventListener('click', () => chosenAnswer(correct));
@@ -43,6 +47,7 @@ export const answersComponent = (showAnswer) => {
     let {answers} = fetchedQuestions[currentQuestion];
 
     let answersToRender = document.createElement('ul');
+    answersToRender.className = 'answers-container';
 
     if (showAnswer) {
         answers.map(ans =>

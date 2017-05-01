@@ -1,18 +1,55 @@
-html, body {
-    height: 100%;
-    //background-color: burlywood;
-}
+@import "./mixins";
+@import "vars";
 
-#root {
-    width: 100%;
-    height: 100%;
+html, body, #root {
+    @include maxSize;
 }
 
 #timer {
+    @include maxSize;
     position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background-color: burlywood;
+    z-index: 0;
+    background-color: $questionBgColor;
+}
 
+.main-container {
+    @include maxSize;
+    background-color: $questionSubBgColor;
+}
+
+// start view
+.start-container {
+    @include maxSize;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include mQ($mediumDevice) {
+        width: $mediumUp;
+        margin: 0 auto;
+    }
+    @include mQ($largeDevice) {
+        width: $largeOnly;
+        padding: $largePadding;
+    }
+}
+
+//.start-container--sub-gray {
+//    background-color: $questionSubBgColor;
+//}
+
+.sg-button-primary--size {
+    height: 60px;
+    @include mQ($mediumDevice) { height: 70px; }
+    @include mQ($largeDevice) { margin-top: 20px; }
+}
+
+.sg-button-primary--size__text {
+    font-size: 28px;
+    @include mQ($mediumDevice) { font-size: 33px }
+}
+
+// quiz
+.question-container, .answer-container, .answers-container {
+    z-index: 1;
 }

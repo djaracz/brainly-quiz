@@ -18,7 +18,7 @@ const resetQuizData = () => {
 const nextQuestion = () => {
     appData.allowChooseAnswer = true;
     appData.currentTimerWidth = 100;
-    incrementCurrentQuestion();
+    incrementQuestion();
     runTimer(appData.timePerQuestion, true);
     startInterval();
     root(questionView);
@@ -28,7 +28,7 @@ const validateAnswer =
     (isCorrect) => (isCorrect) ?
         appData.userScore += 1 : null;
 
-const incrementCurrentQuestion = () =>
+const incrementQuestion = () =>
     appData.currentQuestion += 1;
 
 export const runQuiz = () => {
