@@ -1,7 +1,5 @@
-
-
 export const timer = () => {
-    let timerToRender = document.createElement('div');
+    const timerToRender = document.createElement('div');
     timerToRender.id = 'timer';
 
     return timerToRender;

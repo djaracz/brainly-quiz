@@ -1,8 +1,7 @@
-import appData from './appData';
+import { appData } from './appData';
 import { runQuiz } from './functions';
 
-
-const fetchData = () => {
+export const fetchData = () => {
     const url = 'https://cdn.rawgit.com/kdzwinel/cd08d08002995675f10d065985257416/raw/811ad96a0567648ff858b4f14d0096ba241f28ef/quiz-data.json';
     const request = new XMLHttpRequest();
     request.open(
@@ -24,12 +23,9 @@ const fetchData = () => {
 };
 
 const setFetchedData = (data) => {
-    let {questions, time_seconds} = data;
+    const {questions, time_seconds} = data;
 
     appData.fetchedQuestions = questions;
     appData.timePerQuestion = Math.floor(time_seconds * 1000 / questions.length);
-    // appData.timePerQuestion = 1000000;
     runQuiz();
 };
-
-export default fetchData;

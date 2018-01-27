@@ -1,4 +1,4 @@
-import appData from '../appData';
+import { appData } from '../appData';
 
 export const question = (className) => {
     let {fetchedQuestions, currentQuestion} = appData;

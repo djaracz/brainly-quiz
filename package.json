@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server"
   },
-  "author": "dj",
+  "author": "djaracz",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.24.1",

@@ -5,7 +5,7 @@ import { box } from '../components/box';
 
 
 export const questionCorrectAnswerView = () => {
-    let view = document.createElement('div');
+    const view = document.createElement('div');
     view.className = "question-container";
     view.appendChild(
         question('sg-text-bit sg-text-bit--small sg-text-bit--font-size sg-text-bit--light sg-text-bit--wrap')

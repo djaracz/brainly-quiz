@@ -1,4 +1,4 @@
-import appData from '../appData';
+import { appData } from '../appData';
 import { answer } from './answer';
 
 export const answers = (showAnswer) => {

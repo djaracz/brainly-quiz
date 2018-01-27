@@ -2,9 +2,8 @@ import { header } from '../components/header';
 import { button } from '../components/button';
 import { attemptToRunQuiz } from '../functions';
 
-
 export const startView = () => {
-    let view = document.createElement('div');
+    const view = document.createElement('div');
     view.className = "start-container";
     view.appendChild(header(
         'czy jestes gotowy sprawdźić swoja wiedzę?',

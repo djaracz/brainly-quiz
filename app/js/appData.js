@@ -1,5 +1,4 @@
-
-const appData = {
+export const appData = {
     quizStarted: false,
     showResult: false,
     allowChooseAnswer: false,
@@ -11,5 +10,3 @@ const appData = {
     currentTimerWidth: 100,
     interval: null
 };
-
-export default appData;

@@ -1,12 +1,11 @@
-import appData from './appData';
-import fetchData from './fetchData';
+import { appData } from './appData';
+import { fetchData } from './fetchData';
 import { root } from '../index';
 import { clearTimers, runTimer, showCorrectAnswerTimer, startInterval } from './timers';
 import { questionView } from './views/questionView';
 import { resultView } from './views/resultView';
 import { startView } from './views/startView';
 import { questionCorrectAnswerView } from './views/questionCorrectAnswerView';
-
 
 const resetQuizData = () => {
     appData.quizStarted = false;
@@ -27,9 +26,7 @@ const nextQuestion = () => {
     root(questionView);
 };
 
-const validateAnswer =
-    (isCorrect) => (isCorrect) ?
-        appData.userScore += 1 : null;
+const validateAnswer = (isCorrect) => (isCorrect) ? appData.userScore += 1 : null;
 
 const incrementQuestion = () =>
     appData.currentQuestion += 1;
@@ -44,9 +41,7 @@ export const runQuiz = () => {
 };
 
 export const attemptNextQuestion = () => {
-    let {currentQuestion, fetchedQuestions} = appData;
-
-    if (currentQuestion < fetchedQuestions.length - 1) {
+    if (appData.currentQuestion < appData.fetchedQuestions.length - 1) {
         nextQuestion();
     } else {
         clearTimers();
@@ -60,9 +55,7 @@ export const restartQuiz = () => {
 };
 
 export const chosenAnswer = (isCorrect) => {
-    let {allowChooseAnswer} = appData;
-
-    if (allowChooseAnswer) {
+    if (appData.allowChooseAnswer) {
         appData.allowChooseAnswer = false;
         clearTimers();
         validateAnswer(isCorrect);
@@ -71,12 +64,4 @@ export const chosenAnswer = (isCorrect) => {
     }
 };
 
-export const attemptToRunQuiz = () => {
-    let {fetchedQuestions} = appData;
-
-    if (fetchedQuestions.length === 0) {
-        fetchData();
-    } else {
-        runQuiz();
-    }
-};
+export const attemptToRunQuiz = () => appData.fetchedQuestions.length === 0 ? fetchData() : runQuiz();

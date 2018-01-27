@@ -1,4 +1,4 @@
-import appData from './appData';
+import { appData } from './appData';
 import { attemptNextQuestion } from './functions';
 import { root } from '../index';
 import { questionCorrectAnswerView } from './views/questionCorrectAnswerView';
@@ -17,7 +17,7 @@ const stopTimer = (showCorrect) => {
 };
 
 const setTimerWidth = () => {
-    let timer = document.getElementById('timer');
+    const timer = document.getElementById('timer');
 
     appData.currentTimerWidth -= 1;
     timer.style.width = `${appData.currentTimerWidth}%`;

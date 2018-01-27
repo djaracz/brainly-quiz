@@ -3,7 +3,7 @@ import { button } from '../components/button';
 import { restartQuiz } from '../functions';
 
 export const mainView = (child) => {
-    let view = document.createElement('div');
+    const view = document.createElement('div');
     view.className = 'main-container';
     view.appendChild(timer());
     view.appendChild(button(
