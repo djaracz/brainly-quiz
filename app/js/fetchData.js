@@ -23,9 +23,7 @@ export const fetchData = () => {
 };
 
 const setFetchedData = (data) => {
-    const {questions, time_seconds} = data;
-
-    appData.fetchedQuestions = questions;
-    appData.timePerQuestion = Math.floor(time_seconds * 1000 / questions.length);
+    appData.fetchedQuestions = data.questions;
+    appData.timePerQuestion = Math.floor(data.time_seconds * 1000 / data.questions.length);
     runQuiz();
 };

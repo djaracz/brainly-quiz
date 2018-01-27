@@ -1,11 +1,11 @@
+import { root } from '../index';
 import { appData } from './appData';
 import { fetchData } from './fetchData';
-import { root } from '../index';
-import { clearTimers, runTimer, showCorrectAnswerTimer, startInterval } from './timers';
-import { questionView } from './views/questionView';
-import { resultView } from './views/resultView';
 import { startView } from './views/startView';
+import { resultView } from './views/resultView';
+import { questionView } from './views/questionView';
 import { questionCorrectAnswerView } from './views/questionCorrectAnswerView';
+import { clearTimers, runTimer, showCorrectAnswerTimer, startInterval } from './timers';
 
 const resetQuizData = () => {
     appData.quizStarted = false;

@@ -1,7 +1,7 @@
 import { chosenAnswer } from '../functions';
 
 export const answer = (className, correct, answer) => {
-    let answerToRender = document.createElement('li');
+    const answerToRender = document.createElement('li');
     answerToRender.className = className;
     answerToRender.innerHTML = `
         <div class="sg-list__icon sg-list__icon--x32 sg-list__icon--align-top">

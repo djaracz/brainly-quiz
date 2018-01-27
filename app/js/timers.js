@@ -1,8 +1,7 @@
+import { root } from '../index';
 import { appData } from './appData';
 import { attemptNextQuestion } from './functions';
-import { root } from '../index';
 import { questionCorrectAnswerView } from './views/questionCorrectAnswerView';
-
 
 const SHOW_CORRECT_ANSWER_DURATION = 3000;
 
